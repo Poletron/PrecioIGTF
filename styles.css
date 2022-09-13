@@ -9,6 +9,9 @@ body{
 .button{
     width: 100%;
 }
+.subtitle, .title, .is-text, .label {
+    color: #fff !important;
+}
 .bg-light{
     background-color: #121212;
     border-radius: 10px;
