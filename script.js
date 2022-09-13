@@ -31,9 +31,9 @@ function calcularTotalAIngresarBS(precioFinal,tasaDiaria) {
 document.getElementById('boton-calcular').addEventListener('click',function () {
     let montoFinal = document.getElementById('monto-final').value;
     let tasaDiaria = document.getElementById('tasa-diaria').value;
-    document.getElementById('total-a-ingresar').innerText = round(calcularTotalAIngresarBS(montoFinal,tasaDiaria)) + ' BS';
-    document.getElementById('resultado-igtf').innerText = round(calcularIGTF(montoFinal)*tasaDiaria) + ' BS';
+    document.getElementById('total-a-ingresar').innerText = round(calcularTotalAIngresarBS(montoFinal,tasaDiaria));
+    document.getElementById('resultado-igtf').innerText = round(calcularIGTF(montoFinal)*tasaDiaria);
+    document.getElementById('subtotal-bs').innerText = round(CalcularPrecioSinIvaUSD(montoFinal)*tasaDiaria);
+    document.getElementById('total-bs').innerText = round(montoFinal*tasaDiaria);
 })
 
-console.log(calcularTotalAIngresarBS(5,5));
-console.log(calcularIGTF(150));
