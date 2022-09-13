@@ -9,27 +9,55 @@
     <link rel="stylesheet" href="node_modules\bulma\css\bulma.min.css">
 </head>
 <body>
-
-    <div class="field">
-        <label class="label">Monto Final en dolares</label>
-        <div class="control">
-          <input class="input" type="number" id="monto-final" placeholder="Valor en Dolares">
+  <section class="section">
+    <div class="container"> 
+      <div class="columns is-mobile">
+        <div class="field column is-half">
+            <label class="label">Monto Final en dolares</label>
+            <div class="control">
+              <input class="input" type="number" id="monto-final" placeholder="Valor en Dolares">
+            </div>
+            <!-- <p class="help">Valor del producto en numeros.</p> -->
         </div>
-        <p class="help">Valor del producto en numeros.</p>
-    </div>
-    <div class="field">
-        <label class="label">Precio del Dolar</label>
-        <div class="control">
-          <input class="input" type="number" id="tasa-diaria" placeholder="Tasa del Dia">
+        <div class="field column is-half">
+            <label class="label">Precio del Dolar</label>
+            <div class="control">
+              <input class="input" type="number" id="tasa-diaria" placeholder="Tasa del Dia">
+            </div>
+            <!-- <p class="help">Si la tasa BCV es de 8.5 Bs por dolar debera ingresar "8.5"</p> -->
         </div>
-        <p class="help">Si la tasa BCV es de 8.5 Bs por dolar debera ingresar "8.5"</p>
-    </div>
-    <button type="button" class="button" id="boton-calcular">Calcular</button>
+      </div>
+      <button type="button" class="button is-primary " id="boton-calcular">Calcular</button>
+      <div class="columns is-mobile my-4">
+        <div class="column is-full has-text-centered">
+          <h2 class="subtitle" id="">Monto a ingresar en maquina fiscal</h1>
+          <h2 class="title" id="total-a-ingresar">00.00 Bs</h1>
+        </div>
+      </div>
 
-    <h2 class="subtitle" id="">Total a ingresar</h1>
-    <h2 class="title" id="total-a-ingresar"></h1>
-    <h3 class="subtitle">El IGTF sera de</h3>
-    <h2 class="title" id="resultado-igtf"></h1>
+      <div class="columns is-mobile">
+        <div class="column bg-light">
+          <h3 class="subtitle px-3">El IGTF sera de</h3>
+          <h2 class="title px-3" id="resultado-igtf">00.00 Bs</h1>
+        </div>
+        <div class="column bg-light">
+          <h3 class="subtitle px-3">El IVA sera de</h3>
+          <h2 class="title px-3" id="resultado-iva">00.00 Bs</h1>
+        </div>
+      </div>
+      <div class="columns my-4 is-mobile">
+        <div class="column bg-light">
+          <h3 class="subtitle px-3">El IGTF sera de</h3>
+          <h2 class="title px-3" id="subtotal-bs">00.00 Bs</h1>
+        </div>
+        <div class="column bg-light">
+          <h3 class="subtitle px-3">El IVA sera de</h3>
+          <h2 class="title px-3" id="total-bs">00.00 Bs</h1>
+        </div>
+      </div>
+      
+    </div>
+  </section>
       <!-- <label for="" class="file-label">
         <input type="file" class="file-input">
         <span class="file-cta"> 
