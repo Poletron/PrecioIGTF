@@ -4,7 +4,7 @@ function round(num) {
 }
 
 function CalcularPrecioSinIvaUSD(precioFinal) {
-    let precioSinIvaUSD = precioFinal / 1.19;
+    let precioSinIvaUSD = calcularSubMasIva(precioFinal) / 1.16;
     return precioSinIvaUSD;
 }
 
@@ -14,12 +14,17 @@ function calcularIva(precioFinal) {
 }
 
 function calcularIGTF(precioFinal) {
-    let IGTF = (CalcularPrecioSinIvaUSD(precioFinal) * 0.03);
+    let IGTF = (calcularSubMasIva(precioFinal) * 0.03);
     return IGTF;
 }
 
+function calcularSubMasIva(precioFinal) {
+    let subMasIva = precioFinal/1.03;
+    return subMasIva;
+}
+
 function calcularTotalAIngresarUSD(precioFinal) {
-    let totalAIngresarUSD = CalcularPrecioSinIvaUSD(precioFinal) + calcularIva(precioFinal);
+    let totalAIngresarUSD = calcularSubMasIva(precioFinal);
     return totalAIngresarUSD;
 }
 
